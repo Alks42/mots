@@ -253,7 +253,7 @@ thon|тунец|noun|food||m|
 biscuit|печенье|noun|food||m|
 spaghetti|спагетти|noun|food||m|
 carte bancaire|банковская карта|noun|docs||f|
-espèces|наличные (en espèces — наличными)|noun|docs||f|
+espèces|наличные|noun|docs||f|
 boisson|напиток|noun|food||f|
 eau|вода|noun|food||f|
 vin|вино|noun|food||m|
@@ -340,7 +340,7 @@ nourriture|еда|noun|food||f|
 addition|счёт (в ресторане)|noun|food||f|
 carte|меню (постоянное), карта|noun|food||f|
 menu|меню (сегодняшнее)|noun|food||m|
-entrée|закуска (en entrée)|noun|food||f|
+entrée|закуска|noun|food||f|
 plat|блюдо|noun|food||m|
 formule|комплексное предложение|noun|food||f|
 blanquette de veau|бланкет из телятины|noun|food||f|
@@ -428,7 +428,7 @@ essayer|пробовать, примерять|verb|clothes|||1
 trop|слишком|adv|general|1||
 très|очень|adv|general|1||
 assez|достаточно|adv|general|1||
-vapeur|на пару (à la vapeur)|phrase|food|||
+vapeur|на пару|phrase|food|||
 au lieu de|вместо|prep|general|||
 d'abord|сначала|adv|time|1||
 ensuite|затем, потом|adv|time|1||
@@ -515,7 +515,7 @@ mauvais(e)|плохой|adj|general|||
 comment ça marche|как это работает|phrase|general|||
 selon moi|по-моему|phrase|general|||
 toujours|всегда|adv|time|1||
-jamais|никогда (вместе с ne)|adv|time|1||
+jamais|никогда|adv|time|1||
 parfois|иногда|adv|time|1||
 rarement|редко|adv|time|1||
 en quête de|в поисках|phrase|general|||
@@ -649,7 +649,7 @@ printemps|весна|noun|time||m|
 haut(e)|высокий|adj|general|||
 taille|рост, размер одежды|noun|clothes||f|
 pointure|размер обуви|noun|clothes||f|
-mode|мода (à la mode — модный)|noun|clothes||f|
+mode|мода|noun|clothes||f|
 ça me plaît|мне нравится|phrase|general|||
 horreur|ужас|noun|general||f|
 couleur|цвет|noun|clothes||f|
@@ -825,7 +825,7 @@ commencer à|начинать (делать)|verb|general|||1
 discuter de|обсуждать|verb|general|||1
 poser|класть, ставить|verb|general|||1
 # p31
-désolé(e)|сожалеющий (je suis désolé — мне жаль)|adj|general|1||
+désolé(e)|огорчённый, сожалеющий|adj|general|1||
 envie|желание|noun|general||f|
 gomme|ластик|noun|general||f|
 cahier|тетрадь|noun|general||m|
@@ -917,7 +917,7 @@ toujours|всегда|adv|time|1||
 souvent|часто|adv|time|1||
 parfois|иногда|adv|time|1||
 rarement|редко|adv|time|1||
-jamais|никогда (вместе с ne)|adv|time|1||
+jamais|никогда|adv|time|1||
 sans|без|prep|general|1||
 donc|значит, итак|conj|general|1||
 alors|итак, тогда|adv|general|1||
@@ -1055,7 +1055,7 @@ charges|коммунальные платежи|noun|home||f|
 entretien|обслуживание, уход|noun|home||m|
 emménager|въезжать|verb|home|||1
 # p41
-compris(e)|включённый (charges comprises)|adj|home|||
+compris(e)|включённый|adj|home|||
 location|аренда|noun|home||f|
 localisation|расположение|noun|home||f|
 porche|крыльцо|noun|home||m|
@@ -1118,7 +1118,7 @@ carreleur|плиточник|noun|city||m|
 déménageur|грузчик (при переезде)|noun|city||m|
 ouvrier (ouvrière)|рабочий|noun|city||mf|
 d'abord|прежде всего, сначала|adv|time|1||
-en outre|кроме того (= en plus)|phrase|general|||
+en outre|кроме того|phrase|general|||
 enfin|наконец|adv|time|||
 inonder|затоплять|verb|home|||1
 moisissure|плесень|noun|home||f|
