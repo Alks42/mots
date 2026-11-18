@@ -68,14 +68,50 @@ function isEnabled(w) {
 }
 const pool = () => WORDS.filter(isEnabled);
 
-function pickWeighted(list) {
-  const fresh = list.filter(w => !state.recent.includes(w.id));
-  const src = fresh.length ? fresh : list;
-  let total = 0;
-  const weights = src.map(w => { const k = 1 + 2 * (state.miss[w.id] || 0); total += k; return k; });
-  let r = Math.random() * total;
-  for (let i = 0; i < src.length; i++) { r -= weights[i]; if (r <= 0) return src[i]; }
-  return src[src.length - 1];
+/* ---------- Колода: каждый круг — все включённые слова по одному разу ---------- */
+// Для перевода и для рода — отдельные круги. Хранятся на телефоне.
+const decks = {
+  train: store.get('deck.train', { done: [], again: [], tick: 0 }),
+  gender: store.get('deck.gender', { done: [], again: [], tick: 0 })
+};
+let mode = 'train';
+const saveDeck = m => store.set('deck.' + m, decks[m]);
+
+function drawCard(m, list) {
+  const d = decks[m];
+  d.tick++;
+  const ids = new Set(list.map(w => w.id));
+  const byId = id => WORDS[id];
+  // 1) слово с ошибкой, которому пора вернуться (через 5–10 карточек)
+  const i = d.again.findIndex(a => a.due <= d.tick && ids.has(a.id) && !state.recent.includes(a.id));
+  if (i >= 0) {
+    const w = byId(d.again.splice(i, 1)[0].id);
+    saveDeck(m); remember(w.id);
+    return w;
+  }
+  // 2) следующее слово круга, которого ещё не было
+  const done = new Set(d.done);
+  let rest = list.filter(w => !done.has(w.id));
+  if (!rest.length) { d.done = []; rest = list.slice(); }      // круг пройден — новый круг
+  const fresh = rest.filter(w => !state.recent.includes(w.id));
+  const src = fresh.length ? fresh : rest;
+  const w = src[Math.floor(Math.random() * src.length)];
+  d.done.push(w.id);
+  saveDeck(m); remember(w.id);
+  return w;
+}
+function requeue(m, w) {
+  const d = decks[m];
+  if (!d.again.some(a => a.id === w.id)) d.again.push({ id: w.id, due: d.tick + 5 + Math.floor(Math.random() * 6) });
+  saveDeck(m);
+}
+function roundProgress(m, list) {
+  const ids = new Set(list.map(w => w.id));
+  return { done: decks[m].done.filter(id => ids.has(id)).length, total: list.length };
+}
+function resetRounds() {
+  for (const m of ['train', 'gender']) { decks[m] = { done: [], again: [], tick: 0 }; saveDeck(m); }
+  state.recent = [];
 }
 function remember(id) {
   state.recent.push(id);
@@ -89,8 +125,10 @@ const sizeClass = (text, s, xs) => text.length > xs ? 'xs' : text.length > s ? '
 const promptClass = (text) => text.length > 22 ? 'xlong' : text.length > 11 ? 'long' : '';
 
 function updateScore() {
+  const list = mode === 'gender' ? genderPool() : pool();
+  const { done, total } = roundProgress(mode, list);
   const { ok, bad } = state.score;
-  $('score').textContent = ok + bad ? `✓ ${ok}   ✗ ${bad}` : '';
+  $('score').textContent = `${done} / ${total}` + (ok + bad ? `   ✓ ${ok}  ✗ ${bad}` : '');
 }
 function registerAnswer(w, right) {
   if (right) {
@@ -99,6 +137,7 @@ function registerAnswer(w, right) {
   } else {
     state.score.bad++;
     state.miss[w.id] = (state.miss[w.id] || 0) + 1;
+    requeue(mode, w);
   }
   store.set('miss', state.miss);
   updateScore();
@@ -206,8 +245,8 @@ function nextTranslation() {
     opts.innerHTML = '';
     return;
   }
-  const w = pickWeighted(list);
-  remember(w.id);
+  const w = drawCard('train', list);
+  updateScore();
   const ruToFr = state.ruToFr;
   const label = x => ruToFr ? withArticle(x) : x.ru;
 
@@ -277,8 +316,8 @@ function nextGender() {
     currentGender = null;
     return;
   }
-  const w = pickWeighted(list);
-  remember(w.id);
+  const w = drawCard('gender', list);
+  updateScore();
   currentGender = w;
   $('genderWord').textContent = w.fr;
   $('genderWord').className = 'prompt ' + promptClass(w.fr);
@@ -424,6 +463,7 @@ const SCREENS = ['train', 'gender', 'library', 'rules'];
 function show(name) {
   clearTimeout(autoTimer);
   if (!SCREENS.includes(name)) name = 'train';
+  if (name === 'train' || name === 'gender') mode = name;
   SCREENS.forEach(s => $('screen-' + s).classList.toggle('active', s === name));
   document.querySelectorAll('.drawer a').forEach(a => a.classList.toggle('current', a.dataset.screen === name));
   document.body.classList.toggle('hide-toggle', name !== 'train');
@@ -457,6 +497,11 @@ autoToggle.onclick = () => {
   state.auto = !state.auto;
   store.set('auto', state.auto);
   autoToggle.setAttribute('aria-checked', String(state.auto));
+};
+$('resetBtn').onclick = () => {
+  resetRounds();
+  closeMenu();
+  if (mode === 'gender') nextGender(); else nextTranslation();
 };
 updateScore();
 show(location.hash.slice(1));
