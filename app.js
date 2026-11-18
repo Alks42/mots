@@ -211,7 +211,7 @@ function advance(kind) {
 }
 function afterAnswer(kind, right) {
   if (state.auto) {
-    autoTimer = setTimeout(() => advance(kind), right ? 700 : 1700);
+    autoTimer = setTimeout(() => advance(kind), right ? 400 : 1200);
   }
 }
 // Свайп влево по экрану тренировки — следующее слово (можно и пропустить слово, не отвечая)
