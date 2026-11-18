@@ -1,5 +1,5 @@
 // Офлайн-кэш: приложение работает без интернета после первого открытия.
-const CACHE = 'mots-v9';
+const CACHE = 'mots-v10';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'words.js', 'rules.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png'];
 

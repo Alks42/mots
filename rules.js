@@ -43,7 +43,8 @@ const RULES = [
       { label: 'B — Beauté (красота)', fr: 'beau, joli → un [p|joli] visage', ru: 'красивое лицо' },
       { label: 'A — Age (возраст)', fr: 'jeune, vieux, nouveau → une [p|nouvelle] robe', ru: 'новое платье' },
       { label: 'G — Goodness (хорошо / плохо)', fr: 'bon, mauvais → un [p|bon] film', ru: 'хороший фильм' },
-      { label: 'S — Size (размер)', fr: 'grand, petit, gros → un [p|petit] sac', ru: 'маленькая сумка' }
+      { label: 'S — Size (размер)', fr: 'grand, petit, gros, haut, long → un [p|petit] sac', ru: 'маленькая сумка' },
+      { label: '+ ещё', fr: 'autre, premier, deuxième… → un [p|autre] jour, le [p|premier] jour', ru: 'другой день, первый день (порядковые числительные)' }
     ]
   }
 ];
