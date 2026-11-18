@@ -450,11 +450,13 @@ function renderRules() {
   box.innerHTML = RULES.map(r => {
     const legend = r.legend
       ? `<div class="legend">${r.legend.map(([c, l]) => `<span><mark class="${c}">${l}</mark></span>`).join('')}</div>` : '';
-    const body = r.stanzas
+    const body = r.pairs
+      ? `<div class="pairs">${r.pairs.map(([m, f, ru]) => `<div class="pair"><span class="pm">${m}</span><span class="arrow">→</span><span class="pf">${markup(f)}</span><span class="pru">${ru}</span></div>`).join('')}</div>`
+      : r.stanzas
       ? r.stanzas.map(s => `<div class="stanza"><div class="label">${s.label}</div>
           <div class="fr-line">${markup(s.fr)}</div><div class="ru-line">${s.ru}</div></div>`).join('')
       : r.verses.map(v => `<div class="stanza"><div class="verse">${v.map(markup).join('<br>')}</div></div>`).join('');
-    return `<article class="rule"><h2>${r.title}</h2><p class="rule-sub">${r.sub}</p>${legend}${body}</article>`;
+    return `<article class="rule"><h2>${r.title}</h2><p class="rule-sub">${markup(r.sub)}</p>${legend}${body}</article>`;
   }).join('');
 }
 

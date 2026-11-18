@@ -150,3 +150,12 @@ mark.p { background: var(--btn); box-shadow: inset 0 -2px 0 var(--line); }
 .drawer .reset { margin-top: auto; align-self: stretch; text-align: left; background: none; border: 0; border-top: 1.5px solid var(--line); padding: 16px 0 6px; font-family: var(--serif); font-size: 22px; cursor: pointer; display: flex; justify-content: space-between; }
 .drawer .reset span { font-family: var(--sans); font-size: 22px; }
 .drawer .setting.first { margin-top: 0; border-top: 0; }
+
+/* Правило-таблица: мужская → женская форма */
+.pairs { display: grid; grid-template-columns: auto auto auto 1fr; align-items: baseline; margin: 4px 0 14px; }
+.pair { display: contents; }
+.pair > span { padding: 6px 0; border-bottom: 1px solid #eadfc8; font-family: var(--serif); font-size: 21px; }
+.pair:last-child > span { border-bottom: 0; }
+.pair .arrow { color: var(--muted); font-size: 16px; padding: 6px 8px; }
+.pair .pf { font-weight: 600; }
+.pair .pru { font-family: var(--sans); font-size: 14px; color: #5d5544; text-align: right; padding-left: 8px; }

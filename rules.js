@@ -46,5 +46,22 @@ const RULES = [
       { label: 'S — Size (размер)', fr: 'grand, petit, gros, haut, long → un [p|petit] sac', ru: 'маленькая сумка' },
       { label: '+ ещё', fr: 'autre, premier, deuxième… → un [p|autre] jour, le [p|premier] jour', ru: 'другой день, первый день (порядковые числительные)' }
     ]
+  },
+  {
+    title: 'Le féminin',
+    sub: 'Обычно женский род: + e (petit → petit[f|e]). А эти — по-особому:',
+    pairs: [
+      ['nouveau', 'nouv[f|elle]', 'новый'],
+      ['beau', 'b[f|elle]', 'красивый'],
+      ['blanc', 'blan[f|che]', 'белый'],
+      ['franc', 'fran[f|che]', 'искренний'],
+      ['gros', 'gros[f|se]', 'большой, толстый'],
+      ['long', 'long[f|ue]', 'длинный'],
+      ['sec', 's[f|èche]', 'сухой'],
+      ['vieux', 'vi[f|eille]', 'старый'],
+      ['faux', 'fau[f|sse]', 'неверный'],
+      ['frais', 'fra[f|îche]', 'свежий'],
+      ['doux', 'dou[f|ce]', 'мягкий']
+    ]
   }
 ];
