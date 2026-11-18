@@ -35,5 +35,15 @@ const RULES = [
       ['À и le сольются в [p|au],', '[p|Au] ciné иду в кино!'],
       ['De и le сольются в [p|du],', 'Книгу [p|du] papa люблю!']
     ]
+  },
+  {
+    title: 'B.A.G.S.',
+    sub: 'Прилагательные, которые стоят перед существительным',
+    stanzas: [
+      { label: 'B — Beauté (красота)', fr: 'beau, joli → un [p|joli] visage', ru: 'красивое лицо' },
+      { label: 'A — Age (возраст)', fr: 'jeune, vieux, nouveau → une [p|nouvelle] robe', ru: 'новое платье' },
+      { label: 'G — Goodness (хорошо / плохо)', fr: 'bon, mauvais → un [p|bon] film', ru: 'хороший фильм' },
+      { label: 'S — Size (размер)', fr: 'grand, petit, gros → un [p|petit] sac', ru: 'маленькая сумка' }
+    ]
   }
 ];
