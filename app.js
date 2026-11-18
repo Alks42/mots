@@ -48,6 +48,15 @@ function article(w) {
   if (/^[A-Z]{2,}/.test(w.fr)) return w.g === 'f' ? 'la ' : 'le ';
   return w.g === 'f' ? 'la ' : 'le ';
 }
+// Неразрывные пробелы: короткие слова (в, к, с, le, la…) не остаются в конце строки,
+// тире и скобки не отрываются от соседнего слова.
+const NB = ' ';
+function nobr(text) {
+  return text
+    .replace(/(^|[\s(])([A-Za-zА-Яа-яЁёàâçéèêëîïôûùœ’']{1,2}) /g, '$1$2' + NB)
+    .replace(/ (—|–)/g, NB + '$1')
+    .replace(/\(([^)]{1,16})\)/g, (m, inner) => '(' + inner.replace(/ /g, NB) + ')');  // короткая скобка — целиком на одной строке
+}
 const withArticle = w => article(w) + w.fr;
 const indefinite = w => (w.g === 'f' ? 'une ' : 'un ') + w.fr;
 
@@ -207,14 +216,14 @@ function nextTranslation() {
 
   const promptText = ruToFr ? w.ru : withArticle(w);
   const p = $('trainWord');
-  p.textContent = promptText;
+  p.textContent = nobr(promptText);
   p.className = 'prompt ' + (ruToFr ? 'ru ' : '') + promptClass(promptText);
 
   opts.innerHTML = '';
   for (const c of choices) {
     const b = document.createElement('button');
     const text = label(c);
-    b.textContent = text;
+    b.textContent = nobr(text);
     b.className = 'opt ' + (ruToFr ? 'fr ' : '') + sizeClass(text, ruToFr ? 14 : 12, ruToFr ? 24 : 22);
     b._word = c;
     b.onclick = () => answerTranslation(b, c, w);
@@ -229,7 +238,7 @@ function answerTranslation(btn, chosen, w) {
   registerAnswer(w, right);
   const buttons = [...$('trainOptions').children];
   buttons.forEach(b => { b.disabled = true; });
-  const correctBtn = buttons[[...buttons].findIndex(b => b.textContent === (state.ruToFr ? withArticle(w) : w.ru))];
+    const correctBtn = buttons.find(b => b._word.id === w.id);
   if (correctBtn) correctBtn.classList.add('ok');
   if (!right) {
     btn.classList.add('bad');
@@ -238,7 +247,7 @@ function answerTranslation(btn, chosen, w) {
     sub.innerHTML = '';
     const span = document.createElement('span');
     span.className = 'answer' + (state.ruToFr ? '' : ' ru');
-    span.textContent = state.ruToFr ? withArticle(w) : w.ru;
+    span.textContent = nobr(state.ruToFr ? withArticle(w) : w.ru);
     sub.append(span);
   }
   // В режиме свайпа подписываем перевод под каждым вариантом
@@ -246,7 +255,7 @@ function answerTranslation(btn, chosen, w) {
     buttons.forEach(b => {
       const t = document.createElement('small');
       t.className = 'tr ' + (state.ruToFr ? 'ru' : 'fr');
-      t.textContent = state.ruToFr ? b._word.ru : withArticle(b._word);
+      t.textContent = nobr(state.ruToFr ? b._word.ru : withArticle(b._word));
       b.append(t);
     });
   }
@@ -273,7 +282,7 @@ function nextGender() {
   currentGender = w;
   $('genderWord').textContent = w.fr;
   $('genderWord').className = 'prompt ' + promptClass(w.fr);
-  $('genderSub').textContent = w.ru;
+  $('genderSub').textContent = nobr(w.ru);
 }
 
 function answerGender(btn) {
@@ -373,7 +382,7 @@ function renderList() {
     if (w.star) { const s = document.createElement('span'); s.className = 'st'; s.textContent = '★'; tags.append(s); }
     const ru = document.createElement('span');
     ru.className = 'ru';
-    ru.textContent = w.ru;
+    ru.textContent = nobr(w.ru);
     li.append(fr, tags, ru);
     frag.append(li);
   }
