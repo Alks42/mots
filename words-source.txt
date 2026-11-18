@@ -1,0 +1,1136 @@
+# fr|ru|pos|topic|star|gender|group
+# p1
+lundi|понедельник|noun|time||m|
+mardi|вторник|noun|time||m|
+mercredi|среда|noun|time||m|
+jeudi|четверг|noun|time||m|
+vendredi|пятница|noun|time||m|
+samedi|суббота|noun|time||m|
+dimanche|воскресенье|noun|time||m|
+janvier|январь|noun|time||m|
+février|февраль|noun|time||m|
+mars|март|noun|time||m|
+avril|апрель|noun|time||m|
+mai|май|noun|time||m|
+juin|июнь|noun|time||m|
+# p2
+juillet|июль|noun|time||m|
+août|август|noun|time||m|
+septembre|сентябрь|noun|time||m|
+octobre|октябрь|noun|time||m|
+novembre|ноябрь|noun|time||m|
+décembre|декабрь|noun|time||m|
+jour|день|noun|time||m|
+mois|месяц|noun|time||m|
+an|год|noun|time||m|
+aller|идти, ехать|verb|general|||3
+parler|говорить|verb|general|||1
+proposer|предлагать|verb|general|||1
+réserver|бронировать|verb|leisure|||1
+écouter|слушать|verb|general|||1
+adorer|обожать|verb|general|||1
+aimer|любить|verb|general|||1
+travailler|работать|verb|general|||1
+manger|есть (кушать)|verb|food|||1
+dîner|ужинать|verb|food|||1
+utiliser|использовать|verb|general|||1
+habiter|жить (где-то)|verb|home|||1
+jouer|играть|verb|leisure|||1
+étudier|учиться|verb|general|||1
+regarder|смотреть|verb|general|||1
+acheter|покупать|verb|city|||1
+être né(e)|родиться|verb|people|||
+# p3
+demain|завтра|adv|time|1||
+après-demain|послезавтра|adv|time|||
+aujourd'hui|сегодня|adv|time|1||
+c'est|это|phrase|general|||
+à plus|пока (до скорого)|phrase|general|||
+moins|минус, менее|adv|general|||
+préférer|предпочитать|verb|general|||1
+détester|ненавидеть|verb|general|||1
+demander|просить, спрашивать|verb|general|||1
+donner|давать|verb|general|||1
+premier (première)|первый|adj|general|||
+nationalité|национальность|noun|people||f|
+frère|брат|noun|people||m|
+sœur|сестра|noun|people||f|
+voiture|машина|noun|city||f|
+loisir|хобби, досуг|noun|leisure||m|
+nombre|число|noun|general||m|
+chant|пение, песня|noun|leisure||m|
+chanter|петь|verb|leisure|||1
+fatigué(e)|уставший|adj|body|||
+heureux (heureuse)|счастливый|adj|body|||
+aussi|также, тоже|adv|general|||
+quel (quelle)|какой|pron|general|1||
+connaissance|знание, знакомство|noun|general||f|
+livre|книга|noun|leisure||m|
+ici|здесь|adv|general|1||
+dans|в, внутри|prep|general|1||
+qu'est-ce que|что (вопрос)|phrase|general|1||
+est-ce que|вопросительный оборот|phrase|general|1||
+# p4
+chat|кот|noun|nature||m|
+chien|собака|noun|nature||m|
+fleur|цветок|noun|nature||f|
+ordinateur|компьютер|noun|docs||m|
+stylo|ручка|noun|general||m|
+style|стиль|noun|general||m|
+prénom|имя|noun|people||m|
+nom|фамилия|noun|people||m|
+date|дата|noun|time||f|
+date de naissance|дата рождения|noun|people||f|
+naissance|рождение|noun|people||f|
+lieu|место|noun|general||m|
+lieu de naissance|место рождения|noun|people||m|
+pays|страна|noun|city||m|
+ville|город|noun|city||f|
+numéro|номер (телефона и т.п.)|noun|docs||m|
+compte|аккаунт, счёт|noun|docs||m|
+appeler|звать, звонить|verb|general|||1
+covoiturage|совместная поездка|noun|city||m|
+arobase|собачка @|noun|docs||f|
+bande dessinée|комикс|noun|leisure||f|
+mot de passe|пароль|noun|docs||m|
+auteur|автор|noun|leisure||m|
+vrai(e)|правдивый, верный|adj|general|||
+faux (fausse)|ложный, неверный|adj|general|||
+inscrit(e)|зарегистрированный|adj|docs|||
+langue|язык|noun|general||f|
+musique|музыка|noun|leisure||f|
+sport|спорт|noun|leisure||m|
+# p5
+travail|работа|noun|general||m|
+de quoi|о чём|phrase|general|||
+cuisiner|готовить (еду)|verb|food|||1
+cuisson|готовка, варка|noun|food||f|
+préparer|подготавливать|verb|general|||1
+goût|вкус|noun|food||m|
+quartier|квартал, район|noun|city||m|
+exprimer|выражать|verb|general|||1
+comment|как|adv|general|||
+que|что|pron|general|1||
+où|где, куда|adv|general|1||
+ou|или|conj|general|1||
+et|и|conj|general|1||
+qui|кто|pron|general|1||
+mer|море|noun|nature||f|
+plage|пляж|noun|nature||f|
+rue|улица|noun|city||f|
+place|место, площадь|noun|city||f|
+danse|танец|noun|leisure||f|
+danser|танцевать|verb|leisure|||1
+marche|ходьба|noun|leisure||f|
+marcher|ходить, шагать|verb|leisure|||1
+natation|плавание|noun|leisure||f|
+nager|плавать|verb|leisure|||1
+ski|лыжи|noun|leisure||m|
+skier|кататься на лыжах|verb|leisure|||1
+ce sont|это (для мн. числа)|phrase|general|||
+# p6
+beau (belle)|красивый|adj|body|||
+sympa|милый, симпатичный|adj|body|||
+maintenant|сейчас|adv|time|||
+pourquoi|почему|adv|general|1||
+parce que|потому что|conj|general|1||
+il y a|есть, имеется|phrase|general|1||
+vert(e)|зелёный|adj|clothes|||
+animé(e)|оживлённый|adj|city|||
+surpeuplé(e)|перенаселённый|adj|city|||
+historique|исторический|adj|city|||
+pittoresque|живописный|adj|city|||
+sûr(e)|надёжный, безопасный|adj|general|||
+avis|мнение|noun|general|1|m|
+regard|взгляд|noun|body||m|
+beaucoup|много|adv|general|1||
+peu|мало, немного|adv|general|||
+immeuble|многоквартирный дом|noun|city||m|
+supermarché|супермаркет|noun|city||m|
+marché|рынок|noun|city||m|
+grand(e)|большой|adj|general|||
+petit(e)|маленький|adj|general|||
+bruyant(e)|шумный|adj|city|||
+calme|спокойный|adj|general|||
+faire|делать|verb|general|||3
+pour|для, ради|prep|general|||
+depuis|с (какого-то момента)|prep|time|||
+avant|до, перед|prep|time|||
+chanteur (chanteuse)|певец (певица)|noun|leisure||mf|
+# p7
+vendeur (vendeuse)|продавец (продавщица)|noun|city||mf|
+coiffeur (coiffeuse)|парикмахер|noun|city||mf|
+boulanger (boulangère)|пекарь|noun|city||mf|
+patron (patronne)|начальник, хозяин|noun|city||mf|
+sportif (sportive)|спортсмен|noun|leisure||mf|
+médecin|врач|noun|city||m|
+informaticien (informaticienne)|программист|noun|city||mf|
+infirmier (infirmière)|медбрат (медсестра)|noun|city||mf|
+plaisir|удовольствие|noun|general||m|
+gai(e)|весёлый|adj|body|||
+gris(e)|серый|adj|clothes|||
+gros (grosse)|большой, толстый|adj|body|||
+rencontrer|встречать, знакомиться|verb|people|||1
+parent|родитель|noun|people||m|
+grand-mère|бабушка|noun|people||f|
+grand-père|дедушка|noun|people||m|
+mère|мать|noun|people||f|
+père|отец|noun|people||m|
+fils|сын|noun|people||m|
+fille|дочь, девочка|noun|people||f|
+petit-fils|внук|noun|people||m|
+petite-fille|внучка|noun|people||f|
+oncle|дядя|noun|people||m|
+tante|тётя|noun|people||f|
+cousin (cousine)|двоюродный брат (сестра)|noun|people||mf|
+neveu|племянник|noun|people||m|
+nièce|племянница|noun|people||f|
+mariage|свадьба, брак|noun|people||m|
+mari|муж|noun|people||m|
+femme|жена, женщина|noun|people||f|
+# p8
+petit ami (petite amie)|парень (девушка)|noun|people||mf|
+marié(e)|женатый, замужем|adj|people|||
+célibataire|холостой, не замужем|adj|people|||
+étudiant (étudiante)|студент (студентка)|noun|people||mf|
+libre|свободный|adj|general|||
+famille|семья|noun|people||f|
+vélo|велосипед|noun|city||m|
+animal|животное|noun|nature||m|
+formidable|потрясающий|adj|general|||
+amusant(e)|забавный, весёлый|adj|body|||
+joli(e)|милый, красивый|adj|body|||
+raconter|рассказывать|verb|general|||1
+réfléchir|размышлять|verb|general|||2
+penser à|думать о|verb|general|||1
+se reposer|отдыхать|verb|routine|||1
+voici|вот|adv|general|1||
+même|такой же, одинаковый|adj|general|1||
+boucherie|мясная лавка|noun|city||f|
+boucher (bouchère)|мясник|noun|city||mf|
+boulangerie|пекарня|noun|city||f|
+épicerie|бакалея|noun|city||f|
+épicier (épicière)|бакалейщик|noun|city||mf|
+fromagerie|сырная лавка|noun|city||f|
+fromager (fromagère)|продавец сыра|noun|city||mf|
+poissonnerie|рыбная лавка|noun|city||f|
+poissonnier (poissonnière)|продавец рыбы|noun|city||mf|
+aliment|продукт питания|noun|food||m|
+fruit|фрукт|noun|food||m|
+# p9
+abricot|абрикос|noun|food||m|
+cerise|черешня, вишня|noun|food||f|
+fraise|клубника|noun|food||f|
+pêche|персик|noun|food||f|
+pomme|яблоко|noun|food||f|
+tomate|помидор|noun|food||f|
+légume|овощ|noun|food||m|
+courgette|кабачок|noun|food||f|
+haricot vert|стручковая фасоль|noun|food||m|
+poivron|болгарский перец|noun|food||m|
+pomme de terre|картофель|noun|food||f|
+salade|салат|noun|food||f|
+viennoiserie|сдобная выпечка|noun|food||f|
+pain|хлеб|noun|food||m|
+baguette|багет|noun|food||f|
+huile d'olive|оливковое масло|noun|food||f|
+produit laitier|молочный продукт|noun|food||m|
+beurre|сливочное масло|noun|food||m|
+crème|сливки|noun|food||f|
+crème fraîche|сметана|noun|food||f|
+fromage|сыр|noun|food||m|
+yaourt|йогурт|noun|food||m|
+céréale|злак, крупа|noun|food||f|
+farine|мука|noun|food||f|
+pâtes|макароны|noun|food||f|
+riz|рис|noun|food||m|
+œuf|яйцо|noun|food||m|
+poisson|рыба|noun|food||m|
+# p10
+poulet|курица|noun|food||m|
+viande|мясо|noun|food||f|
+thon|тунец|noun|food||m|
+biscuit|печенье|noun|food||m|
+spaghetti|спагетти|noun|food||m|
+carte bancaire|банковская карта|noun|docs||f|
+espèces|наличные (en espèces — наличными)|noun|docs||f|
+boisson|напиток|noun|food||f|
+eau|вода|noun|food||f|
+vin|вино|noun|food||m|
+bière|пиво|noun|food||f|
+soda|газировка|noun|food||m|
+jus|сок|noun|food||m|
+café|кофе, кафе|noun|food||m|
+thé|чай|noun|food||m|
+oignon|лук|noun|food||m|
+carotte|морковь|noun|food||f|
+petit pois|зелёный горошек|noun|food||m|
+ail|чеснок|noun|food||m|
+aubergine|баклажан|noun|food||f|
+champignon|гриб|noun|food||m|
+chou-fleur|цветная капуста|noun|food||m|
+brocoli|брокколи|noun|food||m|
+asperge|спаржа|noun|food||f|
+orange|апельсин|noun|food||f|
+poire|груша|noun|food||f|
+raisin|виноград|noun|food||m|
+citron|лимон|noun|food||m|
+# p11
+pastèque|арбуз|noun|food||f|
+melon|дыня|noun|food||m|
+avocat|авокадо|noun|food||m|
+porc|свинина|noun|food||m|
+bœuf|говядина|noun|food||m|
+veau|телятина|noun|food||m|
+agneau|ягнятина|noun|food||m|
+fruits de mer|морепродукты|noun|food||m|
+sucre|сахар|noun|food||m|
+gâteau|торт, пирожное|noun|food||m|
+lait|молоко|noun|food||m|
+glace|мороженое|noun|food||f|
+vinaigre|уксус|noun|food||m|
+sel|соль|noun|food||m|
+poivre|перец (специя)|noun|food||m|
+boîte|коробка, консервная банка|noun|food||f|
+paquet|пачка, пакет|noun|food||m|
+sac|сумка, мешок|noun|food||m|
+pot|банка (стеклянная)|noun|food||m|
+tube|тюбик|noun|food||m|
+plaquette|брикет (масла)|noun|food||f|
+tablette|плитка (шоколада)|noun|food||f|
+tranche|ломтик|noun|food||f|
+morceau|кусок|noun|food||m|
+douzaine|дюжина|noun|food||f|
+part|часть, порция|noun|food||f|
+kilo|килограмм|noun|food||m|
+livre|фунт (полкило)|noun|food||f|
+# p12
+litre|литр|noun|food||m|
+demi-litre|пол-литра|noun|food||m|
+quart de litre|четверть литра|noun|food||m|
+pack|упаковка (блок)|noun|food||m|
+gramme|грамм|noun|food||m|
+sardine|сардина|noun|food||f|
+pâté|паштет|noun|food||m|
+confiture|джем, варенье|noun|food||f|
+moutarde|горчица|noun|food||f|
+jambon|ветчина|noun|food||m|
+huître|устрица|noun|food||f|
+tarte|пирог|noun|food||f|
+dentifrice|зубная паста|noun|home||m|
+steak|стейк|noun|food||m|
+payer|платить|verb|city|||1
+ajouter|добавлять|verb|general|||1
+facile|лёгкий, простой|adj|general|||
+disponible|доступный, свободный|adj|general|||
+saison|сезон, время года|noun|time||f|
+fromage de chèvre|козий сыр|noun|food||m|
+pourcentage|процент|noun|general||m|
+prix|цена|noun|city||m|
+semaine|неделя|noun|time||f|
+lessive|стиральный порошок|noun|home||f|
+félicitations|поздравления|noun|general||f|
+marchand (marchande)|торговец (торговка)|noun|city||mf|
+chéri(e)|дорогой (милый)|adj|people|||
+frais (fraîche)|свежий|adj|food|||
+# p13
+en ligne|онлайн|phrase|docs|||
+quand|когда|adv|time|||
+nourriture|еда|noun|food||f|
+addition|счёт (в ресторане)|noun|food||f|
+carte|меню (постоянное), карта|noun|food||f|
+menu|меню (сегодняшнее)|noun|food||m|
+entrée|закуска (en entrée)|noun|food||f|
+plat|блюдо|noun|food||m|
+formule|комплексное предложение|noun|food||f|
+blanquette de veau|бланкет из телятины|noun|food||f|
+quiche|киш|noun|food||f|
+omelette|омлет|noun|food||f|
+magret de canard|утиная грудка|noun|food||m|
+repas|приём пищи|noun|food||m|
+assiette|тарелка|noun|home||f|
+carafe|графин|noun|home||f|
+couteau|нож|noun|home||m|
+cuillère|ложка|noun|home||f|
+fourchette|вилка|noun|home||f|
+verre|стакан, бокал|noun|home||m|
+vaisselle|посуда|noun|home||f|
+charcuterie|мясная лавка (колбасы)|noun|city||f|
+crémier (crémière)|продавец молочных продуктов|noun|city||mf|
+monnaie|мелочь, сдача, валюта|noun|docs||f|
+billet|купюра, билет|noun|docs||m|
+salle de bain|ванная комната|noun|home||f|
+pourboire|чаевые|noun|food||m|
+saucisson|колбаса (сухая)|noun|food||m|
+# p14
+crudité|сырой овощ|noun|food||f|
+crudités|салат из сырых овощей|noun|food||f|
+mouton|баранина, баран|noun|food||m|
+gigot|жиго (окорок)|noun|food||m|
+côtelette de porc|свиная отбивная|noun|food||f|
+saumon|лосось|noun|food||m|
+sole|морской язык (рыба)|noun|food||f|
+truite|форель|noun|food||f|
+moule|мидия|noun|food||f|
+garniture|гарнир|noun|food||f|
+pâtisserie|выпечка, кондитерская|noun|food||f|
+bon marché|дешёвый|adj|city|||
+mûr(e)|спелый|adj|food|||
+sucré(e)|сладкий|adj|food|||
+tendre|мягкий, нежный|adj|food|||
+dur(e)|твёрдый|adj|food|||
+sauvage|дикий|adj|nature|||
+composé(e)|сложный, составной|adj|general|||
+cru(e)|сырой|adj|food|||
+saignant(e)|с кровью|adj|food|||
+léger (légère)|лёгкий|adj|food|||
+délicieux (délicieuse)|восхитительный, вкусный|adj|food|||
+délice|восторг, наслаждение|noun|food||m|
+excellent(e)|отличный|adj|general|||
+mitigé(e)|неоднозначный|adj|general|||
+bizarre|странный|adj|general|||
+étonnant(e)|удивительный|adj|general|||
+original(e)|оригинальный|adj|general|||
+# p15
+infect(e)|отвратительный|adj|food|||
+salé(e)|солёный|adj|food|||
+gras (grasse)|жирный|adj|food|||
+lourd(e)|тяжёлый (о пище)|adj|food|||
+cuit(e)|приготовленный|adj|food|||
+cher (chère)|дорогой|adj|city|||
+nettoyer|чистить|verb|home|||1
+tenir|держать|verb|general|||3
+s'arrêter|останавливаться|verb|general|||1
+remercier|благодарить|verb|general|||1
+fondre|таять|verb|food|||3
+autre chose|что-то другое|phrase|general|1||
+parfois|иногда|adv|time|1||
+en général|в общем, обычно|phrase|general|||
+sur place|на месте (есть)|phrase|food|||
+à emporter|на вынос|phrase|food|||
+un peu|немного|adv|general|||
+placard|встроенный шкаф|noun|home||m|
+armoire|шкаф для одежды|noun|home||f|
+frigo|холодильник|noun|home||m|
+cassis|чёрная смородина|noun|food||m|
+devoir|домашнее задание; долг|noun|general||m|
+petit-déjeuner|завтрак|noun|food||m|
+déjeuner|обед|noun|food||m|
+parfait(e)|превосходный, идеальный|adj|general|||
+prendre|брать, принимать|verb|general|||3
+choisir|выбирать|verb|general|||2
+finir|заканчивать|verb|general|||2
+# p16
+porter|носить|verb|clothes|||1
+goûter|пробовать (на вкус)|verb|food|||1
+apporter|приносить|verb|general|||1
+essayer|пробовать, примерять|verb|clothes|||1
+trop|слишком|adv|general|1||
+très|очень|adv|general|1||
+assez|достаточно|adv|general|1||
+vapeur|на пару (à la vapeur)|phrase|food|||
+au lieu de|вместо|prep|general|||
+d'abord|сначала|adv|time|1||
+ensuite|затем, потом|adv|time|1||
+du soir|вечерний, вечером|phrase|time|||
+tout|весь, всё|pron|general|1||
+avec ça|вместе с этим|phrase|general|||
+si|да (в ответ на отрицание)|adv|general|||
+faire les courses|делать покупки|phrase|city|||
+tout de suite|сразу же, сейчас же|adv|time|||
+là|там, тут|adv|general|1||
+ça a été|всё понравилось (было хорошо)|phrase|general|||
+à quelle heure|в какое время|phrase|time|||
+heureusement|к счастью|adv|general|||
+boulevard|бульвар|noun|city||m|
+carrefour|перекрёсток|noun|city||m|
+feu|светофор|noun|city||m|
+rivière|река (впадает в реку)|noun|nature||f|
+fleuve|река (впадает в море)|noun|nature||m|
+mairie|мэрия|noun|city||f|
+lycée|лицей|noun|city||m|
+# p17
+piscine|бассейн|noun|city||f|
+stade|стадион|noun|city||m|
+théâtre|театр|noun|leisure||m|
+centre commercial|торговый центр|noun|city||m|
+centre-ville|центр города|noun|city||m|
+magasin|магазин|noun|city||m|
+église|церковь|noun|city||f|
+gare|вокзал|noun|city||f|
+banque|банк|noun|city||f|
+bâtiment|здание|noun|city||m|
+musée|музей|noun|city||m|
+lac|озеро|noun|nature||m|
+banlieue|пригород|noun|city||f|
+village|деревня|noun|city||m|
+pont|мост|noun|city||m|
+quai|набережная; перрон|noun|city||m|
+chemin|путь, дорога|noun|city||m|
+voie|путь, полоса движения|noun|city||f|
+habitant (habitante)|житель (жительница)|noun|city||mf|
+touriste|турист|noun|city|||
+tout droit|прямо|adv|city|||
+à droite (de)|направо (справа от)|adv|city|||
+à gauche (de)|налево (слева от)|adv|city|||
+en face (de)|напротив|prep|city|||
+devant|перед|prep|city|||
+derrière|позади, за|prep|city|||
+près (de)|близко (от)|prep|city|||
+à côté (de)|рядом (с)|prep|city|||
+loin (de)|далеко (от)|prep|city|||
+# p18
+au bord de|на берегу|prep|city|||
+entre… et…|между… и…|prep|general|||
+au bout de|в конце|prep|city|||
+au coin (de)|на углу|prep|city|||
+à l'angle (de)|на углу|prep|city|||
+se déplacer|перемещаться|verb|city|||1
+passer devant|проходить мимо|verb|city|||1
+longer|идти вдоль|verb|city|||1
+tourner|поворачивать|verb|city|||1
+traverser|пересекать|verb|city|||1
+revenir|возвращаться|verb|city|||3
+retourner|возвращаться|verb|city|||1
+remonter|подниматься (вверх по улице)|verb|city|||1
+redescendre|спускаться (вниз по улице)|verb|city|||3
+attendre|ждать|verb|general|||3
+chercher|искать|verb|general|||1
+monter|подниматься, садиться в транспорт|verb|city|||1
+descendre|спускаться, выходить из транспорта|verb|city|||3
+composter|компостировать (билет)|verb|city|||1
+vendre|продавать|verb|city|||3
+jeter|выбрасывать|verb|home|||1
+télécharger|скачивать, загружать|verb|docs|||1
+mettre|класть, ставить, надевать|verb|general|||3
+indiquer|указывать|verb|general|||1
+commencer|начинать|verb|general|||1
+créer|создавать|verb|general|||1
+découvrir|открывать (для себя)|verb|general|||3
+dormir|спать|verb|routine|||3
+manquer|не хватать, отсутствовать|verb|general|||1
+agréable|приятный|adj|general|||
+# p19
+mauvais(e)|плохой|adj|general|||
+comment ça marche|как это работает|phrase|general|||
+selon moi|по-моему|phrase|general|||
+toujours|всегда|adv|time|1||
+jamais|никогда (вместе с ne)|adv|time|1||
+parfois|иногда|adv|time|1||
+rarement|редко|adv|time|1||
+en quête de|в поисках|phrase|general|||
+sujet|тема|noun|general||m|
+partenaire|партнёр|noun|people|||
+reste|остаток|noun|general||m|
+gens|люди|noun|people||m|
+portable|мобильный телефон|noun|docs||m|
+bus|автобус|noun|city||m|
+trottinette|самокат|noun|city||f|
+train|поезд|noun|city||m|
+tram|трамвай|noun|city||m|
+RER|пригородная электричка|noun|city||m|
+arrêt|остановка|noun|city||m|
+abribus|автобусная остановка (навес)|noun|city||m|
+correspondance|пересадка|noun|city||f|
+guichet|касса, окошко|noun|city||m|
+agent (agente)|сотрудник|noun|city||mf|
+carnet|книжка из 10 билетов|noun|city||m|
+abonnement|абонемент, подписка|noun|city||m|
+hebdomadaire|еженедельный|adj|time|||
+mensuel(le)|ежемесячный|adj|time|||
+# p20
+annuel(le)|ежегодный|adj|time|||
+aller simple|билет в одну сторону|noun|city||m|
+aller-retour|билет туда-обратно|noun|city||m|
+trajet|путь, поездка|noun|city||m|
+terminus|конечная остановка|noun|city||m|
+itinéraire|маршрут|noun|city||m|
+changement|пересадка, изменение|noun|city||m|
+à pied|пешком|adv|city|||
+appli|приложение|noun|docs||f|
+gratuit(e)|бесплатный|adj|city|||
+commun(e)|общий, общественный|adj|city|||
+défini(e)|определённый|adj|general|||
+dernier (dernière)|последний|adj|general|||
+voulu(e)|желаемый|adj|general|||
+vite|быстро|adv|general|||
+lent(e)|медленный|adj|general|||
+rapide|быстрый|adj|general|||
+compliqué(e)|сложный|adj|general|||
+pratique|практичный, удобный|adj|general|||
+court(e)|короткий|adj|general|||
+moyen (moyenne)|средний|adj|general|||
+moyen|способ, средство|noun|general||m|
+sortir|выходить, гулять|verb|leisure|||3
+lancer|запускать, бросать|verb|general|||1
+changer|менять|verb|general|||1
+auprès de|около, у|prep|general|||
+seulement|только|adv|general|||
+pour|для, чтобы|prep|general|1||
+# p21
+sans|без|prep|general|1||
+grâce à|благодаря|prep|general|1||
+à cause de|из-за|prep|general|1||
+donc|значит, итак|conj|general|1||
+bien sûr|конечно|adv|general|1||
+juste|как раз, точно, просто|adv|general|1||
+zut !|чёрт! блин!|phrase|general|||
+arrondissement|округ (района города)|noun|city||m|
+être à l'heure|быть вовремя|phrase|time|||
+pluie|дождь|noun|nature||f|
+retard|опоздание, задержка|noun|time||m|
+la prochaine|следующая (остановка)|phrase|city|||
+à partir de|начиная с|prep|time|||
+fête|праздник, вечеринка|noun|leisure||f|
+flash info|срочные новости|noun|leisure||m|
+chaque|каждый|adj|general|1||
+accueillir|встречать, принимать|verb|general|||3
+encore|ещё, снова|adv|general|1||
+tendance|тенденция, тренд|noun|clothes||f|
+livraison|доставка|noun|city||f|
+s'habiller|одеваться|verb|clothes|||1
+décrire|описывать|verb|general|||3
+vêtement|одежда (предмет одежды)|noun|clothes||m|
+chemise|рубашка|noun|clothes||f|
+gilet|жилет, кофта|noun|clothes||m|
+imperméable|дождевик|noun|clothes||m|
+jupe|юбка|noun|clothes||f|
+manteau|пальто|noun|clothes||m|
+# p22
+pantalon|брюки|noun|clothes||m|
+pull|свитер, джемпер|noun|clothes||m|
+robe|платье|noun|clothes||f|
+short|шорты|noun|clothes||m|
+tee-shirt|футболка|noun|clothes||m|
+veste|пиджак, куртка|noun|clothes||f|
+bijou|украшение|noun|clothes||m|
+ceinture|ремень, пояс|noun|clothes||f|
+chapeau|шляпа|noun|clothes||m|
+chaussures|обувь|noun|clothes||f|
+baskets|кроссовки, кеды|noun|clothes||f|
+bottes|сапоги, ботинки|noun|clothes||f|
+cravate|галстук|noun|clothes||f|
+lunettes de soleil|солнцезащитные очки|noun|clothes||f|
+parapluie|зонт|noun|clothes||m|
+sac à main|сумочка|noun|clothes||m|
+blanc (blanche)|белый|adj|clothes|||
+bleu(e)|синий, голубой|adj|clothes|||
+jaune|жёлтый|adj|clothes|||
+marron|коричневый|adj|clothes|||
+noir(e)|чёрный|adj|clothes|||
+rose|розовый|adj|clothes|||
+rouge|красный|adj|clothes|||
+en cuir|из кожи|phrase|clothes|||
+coton|хлопок|noun|clothes||m|
+laine|шерсть|noun|clothes||f|
+# p23
+neige|снег|noun|nature||f|
+nuage|облако|noun|nature||m|
+orage|гроза|noun|nature||m|
+soleil|солнце|noun|nature||m|
+vent|ветер|noun|nature||m|
+temps|погода; время|noun|nature||m|
+doux (douce)|мягкий, тёплый|adj|nature|||
+vieux (vieille)|старый|adj|general|||
+sec (sèche)|сухой|adj|nature|||
+long (longue)|длинный|adj|clothes|||
+d'occasion|б/у, подержанный|phrase|city|||
+génial(e)|гениальный, классный|adj|general|||
+au fait|кстати|phrase|general|||
+drache|ливень (бельг.)|noun|nature||f|
+chaud(e)|горячий, тёплый|adj|nature|||
+froid(e)|холодный|adj|nature|||
+franc (franche)|искренний|adj|body|||
+nouveau (nouvelle)|новый|adj|general|||
+hiver|зима|noun|time||m|
+été|лето|noun|time||m|
+# p24
+printemps|весна|noun|time||m|
+haut(e)|высокий|adj|general|||
+taille|рост, размер одежды|noun|clothes||f|
+pointure|размер обуви|noun|clothes||f|
+mode|мода (à la mode — модный)|noun|clothes||f|
+ça me plaît|мне нравится|phrase|general|||
+horreur|ужас|noun|general||f|
+couleur|цвет|noun|clothes||f|
+forme|форма|noun|general||f|
+article|товар, статья|noun|city||m|
+voir|видеть|verb|general|||3
+fermer|закрывать|verb|general|||1
+apprendre|учить, учиться|verb|general|||3
+content(e)|довольный|adj|body|||
+tricoter|вязать|verb|clothes|||1
+automne|осень|noun|time||m|
+couture|шитьё|noun|clothes||f|
+tricot|вязание, трикотаж|noun|clothes||m|
+au fil de|по мере, с течением|prep|time|||
+terminer|заканчивать|verb|general|||1
+venir|приходить|verb|general|||3
+téléphoner|звонить|verb|general|||1
+s'inscrire|записываться|verb|docs|||3
+inscription|запись, регистрация|noun|docs||f|
+écharpe|шарф|noun|clothes||f|
+casquette|кепка|noun|clothes||f|
+# p25
+blouson|куртка|noun|clothes||m|
+foulard|платок (шейный)|noun|clothes||m|
+gants|перчатки|noun|clothes||m|
+talons|каблуки|noun|clothes||m|
+sandales|сандалии|noun|clothes||f|
+ciel|небо|noun|nature||m|
+vide|пустой|adj|general|||
+vide-dressing|распродажа своей одежды|noun|clothes||m|
+amas de neige|сугроб|noun|nature||m|
+beige|бежевый|adj|clothes|||
+foncé(e)|тёмный (о цвете)|adj|clothes|||
+clair(e)|светлый|adj|clothes|||
+vif (vive)|яркий|adj|clothes|||
+pâle|бледный|adj|clothes|||
+soie|шёлк|noun|clothes||f|
+cuir|кожа (материал)|noun|clothes||m|
+lin|лён|noun|clothes||m|
+doré(e)|золотой, золотистый|adj|clothes|||
+argenté(e)|серебряный, серебристый|adj|clothes|||
+framboise|малина|noun|food||f|
+bordeaux|бордовый|adj|clothes|||
+pourpre|пурпурный|adj|clothes|||
+convenir|подходить|verb|clothes|||3
+à mon avis|на мой взгляд|phrase|general|||
+bonnet|шапка|noun|clothes||m|
+# p26
+événement|событие|noun|general||m|
+tenue|наряд|noun|clothes||f|
+réparer|чинить|verb|home|||1
+look|образ, стиль|noun|clothes||m|
+célèbre|знаменитый|adj|general|1||
+endroit|место (географическое)|noun|general||m|
+place|место, площадь|noun|city||f|
+plume|перо|noun|nature||f|
+nœud|узел, бант|noun|clothes||m|
+nœud papillon|галстук-бабочка|noun|clothes||m|
+quelque|какой-то, несколько|adj|general|1||
+campagne|деревня, сельская местность|noun|nature||f|
+rendez-vous|встреча|noun|leisure||m|
+chemisier|блузка|noun|clothes||m|
+sandales à talons|босоножки на каблуках|noun|clothes||f|
+chaussettes|носки|noun|clothes||f|
+offrir|дарить|verb|general|||3
+valise|чемодан|noun|leisure||f|
+métier|профессия|noun|city||m|
+bois|дерево (материал), лес|noun|nature||m|
+autre|другой|adj|general|1||
+chose|вещь|noun|general||f|
+jeunes|молодёжь|noun|people||m|
+arbre|дерево|noun|nature||m|
+# p27
+tomber|падать|verb|general|||1
+corde|верёвка|noun|home||f|
+quotidien|повседневность|noun|routine||m|
+batterie externe|повербанк|noun|docs||f|
+écouteurs|наушники|noun|docs||m|
+sans fil|беспроводной|phrase|docs|||
+enceinte|колонка (музыкальная)|noun|docs||f|
+femme enceinte|беременная|noun|people||f|
+montre|часы (наручные)|noun|clothes||f|
+montre connectée|смарт-часы|noun|docs||f|
+cadre|рамка|noun|home||m|
+porte-clés|брелок|noun|home||m|
+clé|ключ|noun|home||f|
+portefeuille|бумажник|noun|docs||m|
+porte-monnaie|кошелёк (для мелочи)|noun|docs||m|
+feuille|лист|noun|general||f|
+sac à dos|рюкзак|noun|clothes||m|
+dos|спина|noun|body||m|
+carré(e)|квадратный|adj|general|||
+rond(e)|круглый|adj|general|||
+poids|вес|noun|body||m|
+rectangulaire|прямоугольный|adj|general|||
+cagnotte|сбор денег (копилка)|noun|docs||f|
+cadeau|подарок|noun|leisure||m|
+bientôt|скоро|adv|time|||
+anniversaire|день рождения, годовщина|noun|leisure||m|
+# p28
+si|если|conj|general|1||
+dépenser|тратить|verb|docs|||1
+restant(e)|оставшийся|adj|general|||
+utile|полезный|adj|general|||
+repérer|заметить, отыскать|verb|general|||1
+servir|служить|verb|general|||3
+ça sert à|это служит для|phrase|general|1||
+numériser|оцифровывать|verb|docs|||1
+réponse|ответ|noun|general||f|
+boucle d'oreille|серьга|noun|clothes||f|
+coque|чехол (для телефона)|noun|docs||f|
+tout le monde|все (люди)|phrase|people|||
+étui|футляр, чехол (для планшета)|noun|docs||m|
+marque|марка, бренд|noun|clothes||f|
+tour|обхват; поездка; башня|noun|clothes||m|
+poitrine|грудь|noun|body||f|
+taille|рост, размер одежды, талия|noun|clothes||f|
+dire|сказать, говорить|verb|general|||3
+monde|мир|noun|general||m|
+promenade|прогулка|noun|leisure||f|
+se brosser les dents|чистить зубы|verb|routine|||1
+heure|час|noun|time||f|
+se coiffer|причёсываться|verb|routine|||1
+se coucher|ложиться спать|verb|routine|||1
+# p29
+se doucher|принимать душ|verb|routine|||1
+se lever|вставать|verb|routine|||1
+et demie|и половина (о времени)|phrase|time|||
+se maquiller|краситься|verb|routine|||1
+midi|полдень|noun|time||m|
+de l'après-midi|после полудня|phrase|time|||
+se raser|бриться|verb|routine|||1
+déjeuner|обедать|verb|routine|||1
+se réveiller|просыпаться|verb|routine|||1
+minuit|полночь|noun|time||m|
+bricoler|мастерить, мелкий ремонт|verb|home|||1
+jardinage|садоводство|noun|home||m|
+lessive|стирка, стиральный порошок|noun|home||f|
+ménage|уборка|noun|home||m|
+faire la vaisselle|мыть посуду|phrase|home|||
+se promener|гулять, прогуливаться|verb|routine|||1
+se préparer|собираться|verb|routine|||1
+jardiner|заниматься садом|verb|home|||1
+dessiner|рисовать|verb|leisure|||1
+cours|урок, занятие|noun|general||m|
+dessin|рисунок|noun|leisure||m|
+jogging|бег трусцой|noun|leisure||m|
+jeu vidéo|видеоигра|noun|leisure||m|
+émission|передача (ТВ, радио)|noun|leisure||f|
+# p30
+tôt|рано|adv|time|1||
+faire la grasse matinée|долго спать утром|phrase|routine|||
+sable|песок|noun|nature||m|
+car|так как, поскольку|conj|general|1||
+coquet (coquette)|кокетливый|adj|body|||
+soin|уход, забота|noun|body||m|
+conseil|совет|noun|general||m|
+seul(e)|один, одинокий|adj|general|||
+ouvrir|открывать|verb|general|||3
+main|рука (кисть)|noun|body||f|
+tasse|чашка|noun|home||f|
+tard|поздно|adv|time|1||
+avant|до, перед, раньше|prep|time|1||
+comme ça|так, таким образом|phrase|general|1||
+quoi|что (после предлога)|pron|general|1||
+chaîne|канал (ТВ)|noun|leisure||f|
+boire|пить|verb|food|||3
+rentrer|возвращаться (домой)|verb|routine|||1
+trouver|находить|verb|general|||1
+retrouver|снова найти, встретиться|verb|general|||1
+arrêter de|прекращать (делать)|verb|general|||1
+commencer à|начинать (делать)|verb|general|||1
+discuter de|обсуждать|verb|general|||1
+poser|класть, ставить|verb|general|||1
+# p31
+désolé(e)|сожалеющий (je suis désolé — мне жаль)|adj|general|1||
+envie|желание|noun|general||f|
+gomme|ластик|noun|general||f|
+cahier|тетрадь|noun|general||m|
+et si on allait…|а что если нам пойти…|phrase|leisure|||
+site|сайт|noun|docs||m|
+complet (complète)|полный, заполненный|adj|general|||
+malheureusement|к сожалению|adv|general|1||
+corps|тело|noun|body||m|
+à ce soir|до вечера|phrase|time|||
+mince|худой, стройный|adj|body|||
+barbe|борода|noun|body||f|
+nez|нос|noun|body||m|
+maigre|тощий|adj|body|||
+yeux|глаза|noun|body||m|
+brun(e)|тёмноволосый, брюнет|adj|body|||
+cheveux|волосы|noun|body||m|
+chauve|лысый|adj|body|||
+roux (rousse)|рыжий|adj|body|||
+caractère|характер|noun|body||m|
+bavard(e)|болтливый|adj|body|||
+courageux (courageuse)|храбрый|adj|body|||
+drôle|забавный, смешной|adj|body|||
+généreux (généreuse)|щедрый|adj|body|||
+# p32
+gentil (gentille)|добрый, милый|adj|body|||
+méchant(e)|злой|adj|body|||
+intelligent(e)|умный|adj|body|||
+sérieux (sérieuse)|серьёзный|adj|body|||
+sociable|общительный|adj|body|||
+stressé(e)|нервный, в стрессе|adj|body|||
+timide|застенчивый|adj|body|||
+règle|линейка; правило|noun|general||f|
+chaque|каждый|adj|general|1||
+vers|к (по направлению)|prep|general|1||
+pouvoir|мочь|verb|general|||3
+vouloir|хотеть|verb|general|||3
+film policier|детектив (фильм)|noun|leisure||m|
+ciné|кино|noun|leisure||m|
+visage|лицо|noun|body||m|
+ni… ni…|ни… ни…|conj|general|1||
+collants|колготки|noun|clothes||m|
+quarantaine|около сорока|noun|general||f|
+plutôt|скорее|adv|general|1||
+blague|шутка|noun|leisure||f|
+surtout|особенно, главным образом|adv|general|1||
+âgé(e)|пожилой, в возрасте|adj|body|||
+à rayures|в полоску|phrase|clothes|||
+# p33
+costaud(e)|крепкий, здоровый|adj|body|||
+allongé(e)|удлинённый, вытянутый|adj|body|||
+débardeur|майка|noun|clothes||m|
+avoir lieu|иметь место, проходить|verb|general|||3
+au lieu de|вместо|prep|general|||
+pendant|кулон; во время|noun|clothes||m|
+étrange|странный|adj|general|||
+étranger (étrangère)|иностранный|adj|city|||
+pays étranger|заграница|noun|city||m|
+en ce qui concerne|что касается|phrase|general|1||
+quant à|что касается|phrase|general|1||
+malade|больной|adj|body|||
+temps libre|свободное время|noun|leisure||m|
+cheval|лошадь|noun|nature||m|
+# p34-36 (список частых слов в конце тетради — все ★)
+aujourd'hui|сегодня|adv|time|1||
+demain|завтра|adv|time|1||
+quel (quelle)|какой|pron|general|1||
+ici|здесь|adv|general|1||
+qu'est-ce que|что (вопрос)|phrase|general|1||
+est-ce que|вопросительный оборот|phrase|general|1||
+pourquoi|почему|adv|general|1||
+parce que|потому что|conj|general|1||
+il y a|есть, имеется|phrase|general|1||
+beaucoup|много|adv|general|1||
+peu|мало, немного|adv|general|1||
+pour|для, чтобы|prep|general|1||
+voici|вот|adv|general|1||
+voilà|вот (там)|adv|general|1||
+même|такой же, одинаковый|adj|general|1||
+puis|затем, потом|adv|time|1||
+chose|вещь|noun|general|1|f|
+ensuite|затем, потом|adv|time|1||
+trop|слишком|adv|general|1||
+très|очень|adv|general|1||
+assez|достаточно|adv|general|1||
+tout|весь, всё|pron|general|1||
+d'abord|сначала|adv|time|1||
+mauvais(e)|плохой|adj|general|1||
+toujours|всегда|adv|time|1||
+souvent|часто|adv|time|1||
+parfois|иногда|adv|time|1||
+rarement|редко|adv|time|1||
+jamais|никогда (вместе с ne)|adv|time|1||
+sans|без|prep|general|1||
+donc|значит, итак|conj|general|1||
+alors|итак, тогда|adv|general|1||
+bien sûr|конечно|adv|general|1||
+juste|как раз, точно, просто|adv|general|1||
+grâce à|благодаря|prep|general|1||
+à cause de|из-за|prep|general|1||
+encore|ещё, снова|adv|general|1||
+quelque|какой-то, несколько|adj|general|1||
+autre|другой|adj|general|1||
+si|если|conj|general|1||
+ça sert à|это служит для|phrase|general|1||
+tôt|рано|adv|time|1||
+tard|поздно|adv|time|1||
+car|так как, поскольку|conj|general|1||
+quoi|что (после предлога)|pron|general|1||
+avant|до, перед, раньше|prep|time|1||
+comme ça|так, таким образом|phrase|general|1||
+être désolé(e)|сожалеть (мне жаль)|phrase|general|1||
+dire|сказать, говорить|verb|general|1||3
+malheureusement|к сожалению|adv|general|1||
+chaque|каждый|adj|general|1||
+vers|к (по направлению)|prep|general|1||
+ni… ni…|ни… ни…|conj|general|1||
+plutôt|скорее|adv|general|1||
+surtout|особенно, главным образом|adv|general|1||
+pris(e)|занятой|adj|general|||
+lire|читать|verb|leisure|||3
+librairie|книжный магазин|noun|city||f|
+aider|помогать|verb|general|||1
+écrire|писать|verb|general|||3
+faire la fête|веселиться, тусоваться|phrase|leisure|||
+rester|оставаться|verb|general|||1
+aventure|приключение|noun|leisure||f|
+s'endormir|засыпать|verb|routine|||3
+# p37
+frisé(e)|кудрявый|adj|body|||
+raide|прямой (о волосах)|adj|body|||
+méchant(e)|злой|adj|body|1||
+assister à|присутствовать на|verb|leisure|||1
+bon (bonne)|хороший, добрый|adj|general|||
+puisque|поскольку|conj|general|||
+être passionné(e) de|увлекаться, страстно любить|phrase|leisure|||
+plein(e)|полный|adj|general|||
+de bonne heure|рано|adv|time|||
+logement|жильё|noun|home||m|
+vie|жизнь|noun|general||f|
+déménager|переезжать|verb|home|||1
+étage|этаж|noun|home||m|
+équipement|оборудование|noun|home||m|
+fenêtre|окно|noun|home||f|
+pièce|комната, помещение|noun|home||f|
+rez-de-chaussée|первый (нижний) этаж|noun|home||m|
+surface|площадь (помещения)|noun|home||f|
+terrasse|терраса|noun|home||f|
+chambre|спальня, комната|noun|home||f|
+cuisine|кухня|noun|home||f|
+salle à manger|столовая|noun|home||f|
+salle de bains|ванная комната|noun|home||f|
+salon|гостиная|noun|home||m|
+# p38
+aire de jeux|детская площадка|noun|city||f|
+meuble|предмет мебели|noun|home||m|
+porte|дверь|noun|home||f|
+bureau|письменный стол; офис|noun|home||m|
+canapé|диван|noun|home||m|
+chaise|стул|noun|home||f|
+fauteuil|кресло|noun|home||m|
+lit|кровать|noun|home||m|
+table basse|журнальный столик|noun|home||f|
+cuisinière|плита|noun|home||f|
+four|духовка, печь|noun|home||m|
+four à micro-ondes|микроволновка|noun|home||m|
+bas (basse)|низкий|adj|home|||
+électroménager|бытовая техника|noun|home||m|
+lave-linge|стиральная машина|noun|home||m|
+décorer|украшать|verb|home|||1
+tableau|картина|noun|home||m|
+tapis|ковёр|noun|home||m|
+sur|на|prep|general|||
+sous|под|prep|general|||
+entrée|прихожая; закуска|noun|home||f|
+poêle|сковорода|noun|home||f|
+bouilloire|чайник (электрический)|noun|home||f|
+théière|заварочный чайник|noun|home||f|
+séjour|гостиная-столовая|noun|home||m|
+# p39
+petit meuble|тумбочка|noun|home||m|
+au-dessus|над|prep|home|||
+au-dessous|под (ниже)|prep|home|||
+cave|подвал|noun|home||f|
+baignoire|ванна|noun|home||f|
+douche|душ|noun|home||f|
+hier|вчера|adv|time|||
+il y a une semaine|неделю назад|phrase|time|||
+la semaine dernière|на прошлой неделе|phrase|time|||
+grenier|чердак|noun|home||m|
+peut-être|возможно, может быть|adv|general|1||
+vide-grenier|барахолка|noun|city||m|
+s'asseoir|садиться|verb|home|||3
+rêve|мечта, сон|noun|general||m|
+garder|хранить, сохранять|verb|general|||1
+ascenseur|лифт|noun|home||m|
+récent(e)|недавний|adj|time|||
+il faut|нужно|phrase|general|1||
+compter|считать|verb|general|||1
+seulement|только|adv|general|1||
+quelquefois|иногда|adv|time|1||
+dernier étage|последний этаж|noun|home||m|
+y|там (туда)|pron|general|||
+chambre de bonne|комната прислуги (мансарда)|noun|home||f|
+# p40
+bruit|шум|noun|home||m|
+cour|двор|noun|home||f|
+se détendre|расслабляться, отдыхать|verb|routine|||3
+couloir|коридор|noun|home||m|
+sous-sol|подвальный этаж|noun|home||m|
+ranger|убирать (по местам)|verb|home|||1
+toit|крыша|noun|home||m|
+garer|парковать|verb|city|||1
+atelier|мастерская|noun|home||m|
+peindre|рисовать красками, красить|verb|leisure|||3
+mur|стена|noun|home||m|
+cheminée|камин|noun|home||f|
+sol|пол|noun|home||m|
+plafond|потолок|noun|home||m|
+chauffage|отопление|noun|home||m|
+louer|снимать, сдавать (в аренду)|verb|home|||1
+propriétaire|владелец (владелица)|noun|home|||
+locataire|арендатор, жилец|noun|home|||
+loyer|арендная плата|noun|home||m|
+agence immobilière|агентство недвижимости|noun|home||f|
+frais|расходы, взнос|noun|docs||m|
+charges|коммунальные платежи|noun|home||f|
+entretien|обслуживание, уход|noun|home||m|
+emménager|въезжать|verb|home|||1
+# p41
+compris(e)|включённый (charges comprises)|adj|home|||
+location|аренда|noun|home||f|
+localisation|расположение|noun|home||f|
+porche|крыльцо|noun|home||m|
+aménagé(e)|обустроенный|adj|home|||
+forfait|тариф, пакет|noun|docs||m|
+immédiatement|немедленно|adv|time|||
+bien|имущество|noun|home||m|
+état|состояние|noun|general||m|
+voisin (voisine)|сосед (соседка)|noun|home||mf|
+moitié|половина|noun|general||f|
+diviser|делить|verb|general|||1
+durée|длительность|noun|time||f|
+bail|договор аренды|noun|home||m|
+vue|вид|noun|home||f|
+meublé(e)|меблированный|adj|home|||
+inquiet (inquiète)|тревожный, обеспокоенный|adj|body|||
+mètre carré|квадратный метр|noun|home||m|
+à vos souhaits|будьте здоровы|phrase|general|||
+oublier|забывать|verb|general|||1
+prochain(e)|следующий|adj|time|||
+fumer|курить|verb|general|||1
+interdiction|запрет|noun|home||f|
+# p42
+laisser|оставлять, позволять|verb|general|||1
+interdit(e)|запрещённый|adj|general|||
+prière de…|просьба… (на табличках)|phrase|home|||
+trier|сортировать|verb|home|||1
+déchet|мусор, отходы|noun|home||m|
+laisse|поводок|noun|home||f|
+défense de…|запрещается…|phrase|home|||
+frapper|стучать|verb|home|||1
+dedans|внутри|adv|general|||
+table extensible|раскладной стол|noun|home||f|
+rangement|место для хранения|noun|home||m|
+fauteuil pivotant|вращающееся кресло|noun|home||m|
+montrer|показывать|verb|general|||1
+dater de|датироваться|verb|general|||1
+homme|человек, мужчина|noun|people||m|
+signe|знак|noun|general||m|
+mourir|умирать|verb|general|||3
+énigme|загадка|noun|leisure||f|
+partie commune|общая зона (в доме)|noun|home||f|
+local à poubelles|помещение для мусора|noun|home||m|
+local à vélos|велосипедная|noun|home||m|
+local|помещение|noun|home||m|
+mot|слово, записка|noun|general||m|
+# p43
+s'amuser|веселиться|verb|leisure|||1
+pelouse|газон, лужайка|noun|home||f|
+résidence|жилой комплекс|noun|home||f|
+boîte aux lettres|почтовый ящик|noun|home||f|
+panne|поломка|noun|home||f|
+fuite d'eau|протечка|noun|home||f|
+fonctionner|функционировать|verb|home|||1
+marcher|работать (о технике), ходить|verb|home|||1
+peintre|маляр, художник|noun|city||m|
+plombier|сантехник|noun|city||m|
+serrurier|слесарь (по замкам)|noun|city||m|
+carreleur|плиточник|noun|city||m|
+déménageur|грузчик (при переезде)|noun|city||m|
+ouvrier (ouvrière)|рабочий|noun|city||mf|
+d'abord|прежде всего, сначала|adv|time|1||
+en outre|кроме того (= en plus)|phrase|general|||
+enfin|наконец|adv|time|||
+inonder|затоплять|verb|home|||1
+moisissure|плесень|noun|home||f|
+fêter|праздновать|verb|leisure|||1
+matière|предмет (школьный)|noun|general||f|
+essayer de|пытаться|verb|general|||1
+moi-même|сам, самостоятельно|pron|general|||
+# p44
+son|звук|noun|general||m|
+quelqu'un|кто-то|pron|general|||
+justificatif de domicile|подтверждение адреса (прописка)|noun|docs||m|
+facture|счёт (документ)|noun|docs||f|
+compte bancaire|банковский счёт|noun|docs||m|
+TVA|НДС|noun|docs||f|
+TTC|с учётом налогов (итого)|phrase|docs|||

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBEED8">
+  <title>Mots</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Open+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <button class="icon-btn" id="menuBtn" aria-label="Меню">
+        <span class="burger"><i></i><i></i><i></i></span>
+      </button>
+      <div class="score" id="score"></div>
+      <button class="dir-toggle" id="dirToggle" role="switch" aria-checked="false" aria-label="Направление перевода">
+        <span class="knob"><span class="flag fr"></span><span class="flag ru"></span></span>
+      </button>
+    </header>
+
+    <!-- Перевод -->
+    <main class="screen" id="screen-train">
+      <div class="card-area">
+        <div class="prompt" id="trainWord"></div>
+        <div class="prompt-sub" id="trainSub"></div>
+      </div>
+      <div class="options" id="trainOptions"></div>
+    </main>
+
+    <!-- Род -->
+    <main class="screen" id="screen-gender">
+      <div class="card-area">
+        <div class="prompt" id="genderWord"></div>
+        <div class="prompt-sub" id="genderSub"></div>
+      </div>
+      <div class="gender-options">
+        <button class="opt big" data-g="m">un</button>
+        <button class="opt big" data-g="f">une</button>
+      </div>
+    </main>
+
+    <!-- Библиотека -->
+    <main class="screen scroll" id="screen-library">
+      <h1 class="page-title">bibliothèque</h1>
+      <p class="page-note" id="libCount"></p>
+      <section class="filters" id="filters"></section>
+      <input class="search" id="search" type="search" placeholder="Поиск: слово или перевод" autocomplete="off">
+      <ul class="word-list" id="wordList"></ul>
+    </main>
+
+    <!-- Правила -->
+    <main class="screen scroll" id="screen-rules">
+      <h1 class="page-title">règles</h1>
+      <div id="rules"></div>
+    </main>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+  <nav class="drawer" id="drawer" aria-hidden="true">
+    <button class="icon-btn close" id="closeBtn" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" width="30" height="30"><path d="M4 4 L20 20 M20 4 L4 20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    </button>
+    <a href="#train" data-screen="train">traduction</a>
+    <a href="#gender" data-screen="gender">le genre</a>
+    <a href="#library" data-screen="library">bibliothèque</a>
+    <a href="#rules" data-screen="rules">règles</a>
+    <div class="setting">
+      <span id="autoLabel">défilement auto</span>
+      <button class="switch" id="autoToggle" role="switch" aria-checked="true" aria-labelledby="autoLabel"><span></span></button>
+    </div>
+  </nav>
+
+  <script src="words.js"></script>
+  <script src="rules.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
