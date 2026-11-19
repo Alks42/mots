@@ -54,8 +54,8 @@ button { font: inherit; color: inherit; }
 .prompt-sub .answer { color: var(--ink); font-family: var(--serif); font-size: 26px; font-weight: 600; }
 
 /* Answer buttons */
-.options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; padding: 0 6px 8px; }
-.opt { background: var(--btn); border: 2.5px solid var(--line); border-radius: 7px; min-height: 66px; padding: 6px 8px; font-weight: 600; font-size: 20px; line-height: 1.15; cursor: pointer; overflow-wrap: break-word; hyphens: manual; text-wrap: balance; transition: background .15s, transform .08s; box-shadow: 0 2px 0 var(--line); }
+.options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; padding: 0 6px 8px; }
+.opt { background: var(--btn); border: 2.5px solid var(--line); border-radius: 7px; min-height: 66px; padding: 6px 11px; font-weight: 600; font-size: 20px; line-height: 1.15; cursor: pointer; overflow-wrap: break-word; hyphens: manual; text-wrap: balance; transition: background .15s, transform .08s; box-shadow: 0 2px 0 var(--line); }
 .opt:active { transform: translateY(2px); box-shadow: none; }
 .opt.s { font-size: 16px; }
 .opt.xs { font-size: 13.5px; }
@@ -67,7 +67,7 @@ button { font: inherit; color: inherit; }
 .opt.dim { opacity: .45; }
 .opt:disabled { cursor: default; }
 
-.gender-options { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 0 6px 8px; }
+.gender-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 0 6px 8px; }
 .opt.big { font-family: var(--serif); font-size: 40px; min-height: 96px; }
 
 /* Drawer */

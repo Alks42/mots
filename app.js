@@ -181,12 +181,16 @@ function pickDistractors(w, label) {
       return { x, sound, score: 3 * sound + 2 * topic + gender + Math.random() * 0.8 };
     });
 
-  const seen = new Set([label(w).toLowerCase(), w.ru.toLowerCase()]);
+  // Отдельные значения перевода без скобок: «дорогой (милый)» → [«дорогой»].
+  // Вариант не берём, если хоть одно его значение совпадает с уже выбранными —
+  // иначе на экране два «дорогой».
+  const meanings = x => x.ru.toLowerCase().replace(/\(.*?\)/g, '').split(/[,;]/).map(s => s.trim()).filter(Boolean);
+  const seen = new Set([label(w).toLowerCase(), ...meanings(w)]);
   const out = [];
   const take = x => {
-    const l = label(x).toLowerCase(), r = x.ru.toLowerCase();
-    if (out.length >= 5 || seen.has(l) || seen.has(r)) return;
-    seen.add(l); seen.add(r); out.push(x);
+    const l = label(x).toLowerCase(), m = meanings(x);
+    if (out.length >= 5 || seen.has(l) || m.some(v => seen.has(v))) return;
+    seen.add(l); m.forEach(v => seen.add(v)); out.push(x);
   };
   // 2 самых созвучных (если они правда похожи) + остальные по общему баллу
   scored.slice().sort((a, b) => b.sound - a.sound).filter(s => s.sound >= 0.45).slice(0, 2).forEach(s => take(s.x));
@@ -233,6 +237,20 @@ document.addEventListener('keydown', e => {
   if ($('screen-gender').classList.contains('active')) advance('gender');
 });
 
+// Уменьшаем шрифт кнопки, пока самое длинное слово не влезет целиком (без разрыва слова)
+function fitButtons(box) {
+  for (const b of box.querySelectorAll('.opt')) {
+    b.style.fontSize = '';
+    b.style.overflowWrap = 'normal';
+    let size = parseFloat(getComputedStyle(b).fontSize);
+    while (b.scrollWidth > b.clientWidth + 1 && size > 11) {
+      size -= 1;
+      b.style.fontSize = size + 'px';
+    }
+    if (b.scrollWidth > b.clientWidth + 1) b.style.overflowWrap = 'anywhere';
+  }
+}
+
 /* ---------- Тренировка: перевод ---------- */
 function nextTranslation() {
   const list = pool();
@@ -268,6 +286,7 @@ function nextTranslation() {
     b.onclick = () => answerTranslation(b, c, w);
     opts.appendChild(b);
   }
+  fitButtons(opts);
 }
 
 function answerTranslation(btn, chosen, w) {
@@ -298,6 +317,7 @@ function answerTranslation(btn, chosen, w) {
       b.append(t);
     });
   }
+  if (!state.auto) fitButtons($('trainOptions'));
   afterAnswer('train', right);
 }
 
