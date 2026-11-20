@@ -63,6 +63,7 @@ const indefinite = w => (w.g === 'f' ? 'une ' : 'un ') + w.fr;
 function isEnabled(w) {
   if (state.off.has('pos:' + w.pos)) return false;
   if (state.off.has('topic:' + w.topic)) return false;
+  if (state.off.has('lesson:' + w.l)) return false;
   if (w.star && state.off.has('star')) return false;
   return true;
 }
@@ -240,19 +241,39 @@ document.addEventListener('keydown', e => {
   if ($('screen-phrase').classList.contains('active')) advance('phrase');
 });
 
-// Уменьшаем шрифт кнопки, пока самое длинное слово не влезет целиком (без разрыва слова)
+// Шрифт уменьшается, пока самая длинная строка не влезет в кнопку с запасом в 4px
+// (отдельно для слова и для подписи-перевода под ним)
+function textWidth(el) {
+  let w = 0;
+  for (const n of el.childNodes) {
+    if (n.nodeType !== 3) continue;
+    const r = document.createRange();
+    r.selectNodeContents(n);
+    for (const rect of r.getClientRects()) w = Math.max(w, rect.width);
+  }
+  return w;
+}
+function shrinkToFit(el, room, min) {
+  el.style.fontSize = '';
+  let size = parseFloat(getComputedStyle(el).fontSize);
+  while (textWidth(el) > room && size > min) {
+    size -= 1;
+    el.style.fontSize = size + 'px';
+  }
+  return textWidth(el) <= room;
+}
 function fitButtons(box) {
   for (const b of box.querySelectorAll('.opt')) {
-    b.style.fontSize = '';
     b.style.overflowWrap = 'normal';
-    let size = parseFloat(getComputedStyle(b).fontSize);
-    while (b.scrollWidth > b.clientWidth + 1 && size > 11) {
-      size -= 1;
-      b.style.fontSize = size + 'px';
-    }
-    if (b.scrollWidth > b.clientWidth + 1) b.style.overflowWrap = 'anywhere';
+    const cs = getComputedStyle(b);
+    const room = b.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 4;
+    let ok = shrinkToFit(b, room, 11);
+    for (const t of b.querySelectorAll('.tr')) ok = shrinkToFit(t, room, 10) && ok;
+    if (!ok || b.scrollWidth > b.clientWidth + 1) b.style.overflowWrap = 'anywhere';
   }
 }
+// Шрифты с Google подгружаются позже — тогда пересчитать размеры
+if (document.fonts) document.fonts.addEventListener('loadingdone', () => fitButtons($('trainOptions')));
 
 /* ---------- Тренировка: перевод ---------- */
 function nextTranslation() {
@@ -406,6 +427,7 @@ function renderFilters() {
   box.innerHTML = '';
   $('libCount').innerHTML = `В тренировке <b>${pool().length}</b> из ${WORDS.length} слов`;
   filterGroup(box, 'Особые', [['star', 'Частые слова', countBy('star'), 'star']], state.off, saveFilters);
+  filterGroup(box, 'Уроки', Object.entries(PHRASE_LESSONS).map(([k, l]) => ['lesson:' + k, l, countBy('l', +k)]), state.off, saveFilters);
   filterGroup(box, 'Часть речи', Object.entries(POS).map(([k, l]) => ['pos:' + k, l, countBy('pos', k)]), state.off, saveFilters);
   filterGroup(box, 'Темы', Object.entries(TOPICS).map(([k, l]) => ['topic:' + k, l, countBy('topic', k)]), state.off, saveFilters);
 }
@@ -434,7 +456,7 @@ function renderList() {
     fr.append(w.fr);
     const tags = document.createElement('span');
     tags.className = 'tags';
-    tags.textContent = POS_SHORT[w.pos] + (w.grp ? ` ${w.grp} гр.` : '') + ' · ' + TOPICS[w.topic] + ' ';
+    tags.textContent = PHRASE_LESSONS[w.l] + ' · ' + POS_SHORT[w.pos] + (w.grp ? ` ${w.grp} гр.` : '') + ' · ' + TOPICS[w.topic] + ' ';
     if (w.star) { const s = document.createElement('span'); s.className = 'st'; s.textContent = '★'; tags.append(s); }
     const ru = document.createElement('span');
     ru.className = 'ru';
