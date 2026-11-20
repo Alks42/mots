@@ -46,13 +46,51 @@
       </div>
     </main>
 
-    <!-- Библиотека -->
+    <!-- Фразы -->
+    <main class="screen" id="screen-phrase">
+      <div class="card-area phr-area">
+        <div class="phr-answer" id="phrAnswer"></div>
+        <div class="phr-hint" id="phrHint"></div>
+        <div class="phr-result" id="phrResult"></div>
+      </div>
+      <div class="phr-bank" id="phrBank"></div>
+      <div class="phr-actions">
+        <button class="round-btn" id="phrUndo" aria-label="Вернуть все слова">↺</button>
+        <button class="round-btn" id="phrHelp" aria-label="Показать перевод">?</button>
+      </div>
+    </main>
+
+    <!-- Библиотека: только списки -->
     <main class="screen scroll" id="screen-library">
       <h1 class="page-title">bibliothèque</h1>
-      <p class="page-note" id="libCount"></p>
-      <section class="filters" id="filters"></section>
-      <input class="search" id="search" type="search" placeholder="Поиск: слово или перевод" autocomplete="off">
-      <ul class="word-list" id="wordList"></ul>
+      <div class="lib-tabs" role="tablist" data-tabs="lib">
+        <button class="lib-tab on" data-tab="libWords" role="tab">mots</button>
+        <button class="lib-tab" data-tab="libPhrases" role="tab">phrases</button>
+      </div>
+      <div id="libWords" data-pane="lib">
+        <input class="search" id="search" type="search" placeholder="Поиск: слово или перевод" autocomplete="off">
+        <ul class="word-list" id="wordList"></ul>
+      </div>
+      <div id="libPhrases" data-pane="lib" hidden>
+        <ul class="word-list" id="phraseList"></ul>
+      </div>
+    </main>
+
+    <!-- Настройки: какие категории тренировать -->
+    <main class="screen scroll" id="screen-settings">
+      <h1 class="page-title">paramètres</h1>
+      <div class="lib-tabs" role="tablist" data-tabs="set">
+        <button class="lib-tab on" data-tab="setWords" role="tab">mots</button>
+        <button class="lib-tab" data-tab="setPhrases" role="tab">phrases</button>
+      </div>
+      <div id="setWords" data-pane="set">
+        <p class="page-note" id="libCount"></p>
+        <section class="filters" id="filters"></section>
+      </div>
+      <div id="setPhrases" data-pane="set" hidden>
+        <p class="page-note" id="phrCount"></p>
+        <section class="filters" id="phrFilters"></section>
+      </div>
     </main>
 
     <!-- Правила -->
@@ -69,8 +107,10 @@
     </button>
     <a href="#train" data-screen="train">traduction</a>
     <a href="#gender" data-screen="gender">le genre</a>
+    <a href="#phrase" data-screen="phrase">phrases</a>
     <a href="#library" data-screen="library">bibliothèque</a>
     <a href="#rules" data-screen="rules">règles</a>
+    <a href="#settings" data-screen="settings" class="bottom-link">paramètres <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></a>
     <button class="reset" id="resetBtn">nouveau tour <span aria-hidden="true">↺</span></button>
     <div class="setting first">
       <span id="autoLabel">défilement auto</span>
@@ -80,6 +120,8 @@
 
   <script src="words.js"></script>
   <script src="rules.js"></script>
+  <script src="phrases.js"></script>
   <script src="app.js"></script>
+  <script src="phrase-app.js"></script>
 </body>
 </html>

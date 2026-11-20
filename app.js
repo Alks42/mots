@@ -111,6 +111,7 @@ function roundProgress(m, list) {
 }
 function resetRounds() {
   for (const m of ['train', 'gender']) { decks[m] = { done: [], again: [], tick: 0 }; saveDeck(m); }
+  resetPhraseDeck();
   state.recent = [];
 }
 function remember(id) {
@@ -125,8 +126,8 @@ const sizeClass = (text, s, xs) => text.length > xs ? 'xs' : text.length > s ? '
 const promptClass = (text) => text.length > 22 ? 'xlong' : text.length > 11 ? 'long' : '';
 
 function updateScore() {
-  const list = mode === 'gender' ? genderPool() : pool();
-  const { done, total } = roundProgress(mode, list);
+  const { done, total } = mode === 'phrase' ? phraseProgress()
+    : roundProgress(mode, mode === 'gender' ? genderPool() : pool());
   const { ok, bad } = state.score;
   $('score').textContent = `${done} / ${total}` + (ok + bad ? `   ✓ ${ok}  ✗ ${bad}` : '');
 }
@@ -208,18 +209,19 @@ function advance(kind) {
   area.classList.add('leave');
   setTimeout(() => {
     area.classList.remove('leave');
-    kind === 'train' ? nextTranslation() : nextGender();
+    ({ train: nextTranslation, gender: nextGender, phrase: nextPhrase })[kind]();
     void area.offsetWidth;            // перезапуск анимации
     area.classList.add('enter');
   }, 180);
 }
 function afterAnswer(kind, right) {
   if (state.auto) {
-    autoTimer = setTimeout(() => advance(kind), right ? 400 : 1200);
+    const delay = kind === 'phrase' ? (right ? 1500 : 3500) : (right ? 400 : 1200);
+    autoTimer = setTimeout(() => advance(kind), delay);
   }
 }
 // Свайп влево по экрану тренировки — следующее слово (можно и пропустить слово, не отвечая)
-['train', 'gender'].forEach(kind => {
+['train', 'gender', 'phrase'].forEach(kind => {
   const el = $('screen-' + kind);
   let x0 = null, y0 = 0;
   el.addEventListener('pointerdown', e => { x0 = e.clientX; y0 = e.clientY; });
@@ -235,6 +237,7 @@ document.addEventListener('keydown', e => {
   if (e.key !== 'ArrowRight') return;
   if ($('screen-train').classList.contains('active')) advance('train');
   if ($('screen-gender').classList.contains('active')) advance('gender');
+  if ($('screen-phrase').classList.contains('active')) advance('phrase');
 });
 
 // Уменьшаем шрифт кнопки, пока самое длинное слово не влезет целиком (без разрыва слова)
@@ -370,57 +373,51 @@ function countBy(key, value) {
   return WORDS.filter(w => (key === 'star' ? w.star : w[key] === value)).length;
 }
 
+// Группа фильтров-«таблеток»; off — множество выключенных ключей, onChange — сохранить и перерисовать
+function filterGroup(box, title, items, off, onChange) {
+  const g = document.createElement('div');
+  g.className = 'fgroup';
+  const h = document.createElement('h2');
+  h.textContent = title;
+  if (items.length > 1) {
+    const all = document.createElement('button');
+    const allOn = items.every(([k]) => !off.has(k));
+    all.textContent = allOn ? 'выключить все' : 'включить все';
+    all.onclick = () => { items.forEach(([k]) => allOn ? off.add(k) : off.delete(k)); onChange(); };
+    h.append(all);
+  }
+  const chips = document.createElement('div');
+  chips.className = 'chips';
+  for (const [key, label, n, extra] of items) {
+    const c = document.createElement('button');
+    c.className = 'chip' + (off.has(key) ? ' off' : '') + (extra ? ' ' + extra : '');
+    c.innerHTML = (extra === 'star' ? '<span class="s">★</span>' : '') + `<span></span><span class="n">${n}</span>`;
+    c.children[extra === 'star' ? 1 : 0].textContent = label;
+    c.setAttribute('aria-pressed', String(!off.has(key)));
+    c.onclick = () => { off.has(key) ? off.delete(key) : off.add(key); onChange(); };
+    chips.append(c);
+  }
+  g.append(h, chips);
+  box.append(g);
+}
+
 function renderFilters() {
   const box = $('filters');
   box.innerHTML = '';
-  const group = (title, items) => {
-    const g = document.createElement('div');
-    g.className = 'fgroup';
-    const h = document.createElement('h2');
-    h.textContent = title;
-    if (items.length > 1) {
-      const all = document.createElement('button');
-      const allOn = items.every(([k]) => !state.off.has(k));
-      all.textContent = allOn ? 'выключить все' : 'включить все';
-      all.onclick = () => {
-        items.forEach(([k]) => allOn ? state.off.add(k) : state.off.delete(k));
-        saveFilters();
-      };
-      h.append(all);
-    }
-    const chips = document.createElement('div');
-    chips.className = 'chips';
-    for (const [key, label, n, extra] of items) {
-      const c = document.createElement('button');
-      c.className = 'chip' + (state.off.has(key) ? ' off' : '') + (extra ? ' ' + extra : '');
-      c.innerHTML = (extra === 'star' ? '<span class="s">★</span>' : '') + `<span></span><span class="n">${n}</span>`;
-      c.children[extra === 'star' ? 1 : 0].textContent = label;
-      c.setAttribute('aria-pressed', String(!state.off.has(key)));
-      c.onclick = () => {
-        state.off.has(key) ? state.off.delete(key) : state.off.add(key);
-        saveFilters();
-      };
-      chips.append(c);
-    }
-    g.append(h, chips);
-    box.append(g);
-  };
-  group('Особые', [['star', 'Частые слова', countBy('star'), 'star']]);
-  group('Часть речи', Object.entries(POS).map(([k, l]) => ['pos:' + k, l, countBy('pos', k)]));
-  group('Темы', Object.entries(TOPICS).map(([k, l]) => ['topic:' + k, l, countBy('topic', k)]));
+  $('libCount').innerHTML = `В тренировке <b>${pool().length}</b> из ${WORDS.length} слов`;
+  filterGroup(box, 'Особые', [['star', 'Частые слова', countBy('star'), 'star']], state.off, saveFilters);
+  filterGroup(box, 'Часть речи', Object.entries(POS).map(([k, l]) => ['pos:' + k, l, countBy('pos', k)]), state.off, saveFilters);
+  filterGroup(box, 'Темы', Object.entries(TOPICS).map(([k, l]) => ['topic:' + k, l, countBy('topic', k)]), state.off, saveFilters);
 }
 
 function saveFilters() {
   store.set('off', [...state.off]);
   renderFilters();
-  renderList();
 }
 
 let listLimit = 150;
 function renderList() {
   const q = $('search').value.trim().toLowerCase();
-  const active = pool().length;
-  $('libCount').innerHTML = `В тренировке <b>${active}</b> из ${WORDS.length} слов`;
   const items = WORDS
     .filter(w => !q || w.fr.toLowerCase().includes(q) || w.ru.toLowerCase().includes(q))
     .sort((a, b) => a.fr.localeCompare(b.fr, 'fr'));
@@ -481,19 +478,21 @@ function renderRules() {
 }
 
 /* ---------- Навигация ---------- */
-const SCREENS = ['train', 'gender', 'library', 'rules'];
+const SCREENS = ['train', 'gender', 'phrase', 'library', 'rules', 'settings'];
 function show(name) {
   clearTimeout(autoTimer);
   if (!SCREENS.includes(name)) name = 'train';
-  if (name === 'train' || name === 'gender') mode = name;
+  if (name === 'train' || name === 'gender' || name === 'phrase') mode = name;
   SCREENS.forEach(s => $('screen-' + s).classList.toggle('active', s === name));
   document.querySelectorAll('.drawer a').forEach(a => a.classList.toggle('current', a.dataset.screen === name));
   document.body.classList.toggle('hide-toggle', name !== 'train');
-  $('score').style.visibility = (name === 'train' || name === 'gender') ? 'visible' : 'hidden';
+  $('score').style.visibility = (name === mode) ? 'visible' : 'hidden';
   closeMenu();
   if (name === 'train') nextTranslation();
   if (name === 'gender') nextGender();
-  if (name === 'library') { renderFilters(); renderList(); }
+  if (name === 'phrase') nextPhrase();
+  if (name === 'library') { renderList(); renderPhraseList(); }
+  if (name === 'settings') { renderFilters(); renderPhraseFilters(); }
   if (name === 'rules') renderRules();
 }
 function openMenu() { document.body.classList.add('menu-open'); $('drawer').setAttribute('aria-hidden', 'false'); }
@@ -523,11 +522,21 @@ autoToggle.onclick = () => {
 $('resetBtn').onclick = () => {
   resetRounds();
   closeMenu();
-  if (mode === 'gender') nextGender(); else nextTranslation();
+  ({ train: nextTranslation, gender: nextGender, phrase: nextPhrase })[mode]();
 };
-updateScore();
-show(location.hash.slice(1));
+// Запуск — после загрузки всех скриптов (phrase-app.js подключается позже)
+document.addEventListener('DOMContentLoaded', () => show(location.hash.slice(1)));
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }
+
+// Вкладки (mots / phrases) в библиотеке и настройках
+document.querySelectorAll('[data-tabs]').forEach(bar => {
+  bar.querySelectorAll('.lib-tab').forEach(b => {
+    b.onclick = () => {
+      bar.querySelectorAll('.lib-tab').forEach(x => x.classList.toggle('on', x === b));
+      document.querySelectorAll(`[data-pane="${bar.dataset.tabs}"]`).forEach(p => { p.hidden = p.id !== b.dataset.tab; });
+    };
+  });
+});

@@ -159,3 +159,46 @@ mark.p { background: var(--btn); box-shadow: inset 0 -2px 0 var(--line); }
 .pair .arrow { color: var(--muted); font-size: 16px; padding: 6px 8px; }
 .pair .pf { font-weight: 600; }
 .pair .pru { font-family: var(--sans); font-size: 14px; color: #5d5544; text-align: right; padding-left: 8px; }
+
+/* ---------- Анимации ответа ---------- */
+.opt:active, .tile:active, .chip:active, .round-btn:active { transform: scale(.95); }
+.opt.ok { animation: pop .32s ease-out; }
+.opt.bad { animation: shake .36s ease-in-out; }
+@keyframes pop { 0% { transform: scale(1); } 45% { transform: scale(1.07); } 100% { transform: scale(1); } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+
+/* ---------- Конструктор фраз ---------- */
+.phr-cats { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 8px; scrollbar-width: none; flex: none; }
+.phr-cats::-webkit-scrollbar { display: none; }
+.chip.small { flex: none; padding: 4px 10px; font-size: 13px; font-family: var(--serif); font-weight: 600; }
+.phr-area { justify-content: center; gap: 14px; }
+.phr-answer { width: 100%; min-height: 112px; display: flex; flex-wrap: wrap; align-content: flex-start; justify-content: center; gap: 8px; padding: 12px 4px; border-bottom: 2.5px solid var(--line); background: repeating-linear-gradient(transparent 0 54px, #e6d8bd 54px 55px); }
+.phr-answer.bad { animation: shake .4s ease-in-out; }
+.phr-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; padding: 6px 4px 12px; min-height: 60px; }
+.tile { background: var(--btn); border: 2.5px solid var(--line); border-radius: 7px; padding: 7px 12px; font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.1; cursor: pointer; box-shadow: 0 2px 0 var(--line); transition: background .15s; }
+.tile.land { animation: land .2s ease-out; }
+.tile.ok { background: var(--ok); animation: pop .35s ease-out both; }
+.tile.bad { background: var(--bad); }
+@keyframes land { from { transform: scale(.8); opacity: .4; } to { transform: scale(1); opacity: 1; } }
+.phr-hint { min-height: 22px; font-size: 16px; color: var(--muted); text-align: center; opacity: 0; transition: opacity .2s; }
+.phr-hint.show { opacity: 1; }
+.phr-result { text-align: center; min-height: 64px; opacity: 0; }
+.phr-result.show { opacity: 1; }
+.phr-result .bravo { font-family: var(--serif); font-size: 38px; font-weight: 600; color: #2f8a3a; animation: bravo .45s cubic-bezier(.2, 1.6, .4, 1); }
+.phr-result .phr-full { font-family: var(--serif); font-size: 20px; margin-top: 2px; }
+.phr-result.bad .phr-full { color: #2f8a3a; font-weight: 600; }
+.phr-result.bad .phr-full::before { content: '→ '; color: var(--muted); }
+@keyframes bravo { from { transform: scale(.3) rotate(-8deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+.phr-actions { display: flex; justify-content: center; gap: 22px; padding-bottom: 6px; }
+.round-btn { width: 46px; height: 46px; border-radius: 50%; border: 2.5px solid var(--line); background: #fffaf0; font-size: 22px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 0 var(--line); }
+
+/* Вкладки библиотеки */
+.lib-tabs { display: flex; gap: 18px; margin: 0 0 12px; border-bottom: 1.5px solid #d9cbb0; }
+.lib-tab { background: none; border: 0; padding: 4px 2px 8px; font-family: var(--serif); font-size: 24px; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1.5px; }
+.lib-tab.on { color: var(--ink); border-bottom-color: var(--ink); font-weight: 600; }
+#phraseList .fr { font-size: 19px; }
+
+/* «paramètres» внизу меню, отдельно от разделов */
+.drawer a.bottom-link { margin-top: auto; border-left: 0; border-top: 1.5px solid var(--line); padding: 16px 0 6px; font-size: 22px; display: flex; justify-content: space-between; align-items: center; }
+.drawer a.bottom-link.current { padding-left: 0; font-weight: 600; }
+.drawer .reset { margin-top: 0; border-top: 0; }

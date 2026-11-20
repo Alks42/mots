@@ -1,6 +1,6 @@
 // Офлайн-кэш: приложение работает без интернета после первого открытия.
-const CACHE = 'mots-v12';
-const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'words.js', 'rules.js', 'manifest.webmanifest',
+const CACHE = 'mots-v17';
+const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'words.js', 'rules.js', 'phrases.js', 'phrase-app.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', e => {
